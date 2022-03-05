@@ -1,0 +1,5 @@
+SELECT distinct(facility_name) 
+FROM bigquery-public-data.covid19_vaccination_access.facility_boundary_us_all
+where travel_time_threshold_minutes = 15
+AND facility_sub_region_1 = "California"
+LIMIT 6;
