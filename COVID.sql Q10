@@ -1,0 +1,5 @@
+SELECT  abcd.facility_name
+   FROM `bigquery-public-data.covid19_vaccination_access.facility_boundary_us_all` abcd
+   RIGHT JOIN `bigquery-public-data.covid19_vaccination_access.facility_boundary_us_drive` wxyz ON abcd.facility_name  = wxyz.facility_name
+   group by abcd.facility_name
+   limit 5;
