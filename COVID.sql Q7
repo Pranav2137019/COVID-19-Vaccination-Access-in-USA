@@ -1,0 +1,4 @@
+SELECT count (mode_of_transportation) AS Drive
+FROM bigquery-public-data.covid19_vaccination_access.facility_boundary_us_all
+where travel_time_threshold_minutes > 15
+AND mode_of_transportation = "drive";
